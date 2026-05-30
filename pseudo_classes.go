@@ -327,7 +327,7 @@ func (s emptyElementPseudoClassSelector) Match(n *html.Node) bool {
 		case html.ElementNode:
 			return false
 		case html.TextNode:
-			if strings.TrimSpace(nodeText(c)) == "" {
+			if strings.TrimSpace(c.Data) == "" {
 				continue
 			} else {
 				return false
