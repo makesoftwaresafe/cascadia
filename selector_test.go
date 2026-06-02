@@ -670,8 +670,8 @@ var selectorTests = []selectorTest{
 		</ul>`,
 		`[href#=(fina)]:not([href#=(\/\/[^\/]+untrusted)])`,
 		[]string{
-			`<a id="a1" href="http://www.google.com/finance"></a>`,
-			`<a id="a2" href="http://finance.yahoo.com/"></a>`,
+			`<a href="http://www.google.com/finance" id="a1"></a>`,
+			`<a href="http://finance.yahoo.com/" id="a2"></a>`,
 		},
 	},
 	{
@@ -683,7 +683,7 @@ var selectorTests = []selectorTest{
 		</ul>`,
 		`[href#=(^https:\/\/[^\/]*\/?news)]`,
 		[]string{
-			`<a id="a3" href="https://www.google.com/news"></a>`,
+			`<a href="https://www.google.com/news" id="a3"></a>`,
 		},
 	},
 	{
